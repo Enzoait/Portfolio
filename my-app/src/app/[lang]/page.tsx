@@ -1,16 +1,17 @@
 import { getDictionary } from "../../utils/dictionaries";
+import Header from "@/components/Header";
 
-type Params = {
-  params: {
-    lang: "en" | "fr";
-  };
-};
-
-export default async function LocalePage({ params }: Params) {
-  const dict = await getDictionary(params.lang);
-  return <button>{dict.welcome}</button>;
-}
-
-export function generateStaticParams() {
-  return [{ lang: "en" }, { lang: "fr" }];
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ lang: "en" | "fr" }>;
+}) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang); 
+  return (
+    <>
+      <Header params={params} />
+      <button>{dict.welcome}</button>
+    </>
+  );
 }

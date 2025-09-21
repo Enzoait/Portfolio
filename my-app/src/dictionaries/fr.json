@@ -1,5 +1,13 @@
 {
   "welcome": "Bienvenue dans Next.js!",
   "description": "Commmencez par éditer",
-  "linkText": "En savoir plus sur Next.js"
+  "linkText": "En savoir plus sur Next.js",
+  "links": {
+    "about": "À propos",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "menu": {
+    "open": "Ouvrir le menu principal"
+  }
 }

@@ -1,5 +1,13 @@
 {
-    "welcome": "Welcome to Next.js!",
-    "description": "Get started by editing",
-    "linkText": "Learn more about Next.js"
+  "welcome": "Welcome to Next.js!",
+  "description": "Get started by editing",
+  "linkText": "Learn more about Next.js",
+  "links": {
+    "about": "About me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "menu": {
+    "open": "Open main menu"
+  }
 }
