@@ -1,5 +1,6 @@
 import { getDictionary } from "../../utils/dictionaries";
 import Header from "@/components/Header";
+import { TypingAnimation } from "@/components/ui/typing-animation";
 
 export default async function Page({
   params,
@@ -11,7 +12,9 @@ export default async function Page({
   return (
     <>
       <Header params={params} />
-      <button>{dict.welcome}</button>
+      <div className="min-h-screen w-full flex items-center justify-center">
+        <TypingAnimation className="text-center">{dict.introduction}</TypingAnimation>
+      </div>
     </>
   );
 }
