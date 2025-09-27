@@ -9,5 +9,9 @@
   },
   "menu": {
     "open": "Open main menu"
+  },
+  "buttons": {
+    "emailme": "Get in touch",
+    "downloadcv": "Download my resume"
   }
 }
