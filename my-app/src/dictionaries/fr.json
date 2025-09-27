@@ -1,7 +1,7 @@
 {
   "introduction": "Bonjour ! Je suis Enzo AÏT-YAKOUB 👋",
   "role": "Développeur Fullstack",
-  "description": "Je construit des solutions numériques robustes et performantes en mettant en oeuvre mes compétences en programmation.",
+  "description": "Je développe des solutions numériques robustes et performantes en mettant en oeuvre mes compétences en programmation.",
   "links": {
     "about": "À propos",
     "projects": "Projets",
@@ -9,5 +9,9 @@
   },
   "menu": {
     "open": "Ouvrir le menu principal"
+  },
+  "buttons": {
+    "emailme": "Me contacter",
+    "downloadcv": "Télécharger mon CV"
   }
 }
