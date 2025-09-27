@@ -1,7 +1,7 @@
 {
-  "welcome": "Welcome to Next.js!",
-  "description": "Get started by editing",
-  "linkText": "Learn more about Next.js",
+  "introduction": "Hello! I'm Enzo AÏT-YAKOUB 👋",
+  "role": "Fullstack Software Developer",
+  "description": "I build robust and performant digital solutions by leveraging my programming skills.",
   "links": {
     "about": "About me",
     "projects": "Projects",
