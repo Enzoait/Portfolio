@@ -26,7 +26,20 @@ export default async function Header({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image src="/github.svg" alt="GitHub" width={25} height={25} />
+                <Image
+                  src="/github.svg"
+                  alt="GitHub"
+                  width={25}
+                  height={25}
+                  className="dark:hidden"
+                />
+                <Image
+                  src="/github-white.svg"
+                  alt="GitHub"
+                  width={25}
+                  height={25}
+                  className="hidden dark:block"
+                />
               </Link>
               <Link
                 href={SOCIALS.linkedin}
@@ -38,6 +51,14 @@ export default async function Header({
                   alt="LinkedIn"
                   width={25}
                   height={25}
+                  className="dark:hidden"
+                />
+                <Image
+                  src="/linkedin-white.svg"
+                  alt="LinkedIn"
+                  width={25}
+                  height={25}
+                  className="hidden dark:block"
                 />
               </Link>
               <AnimatedThemeToggler />
