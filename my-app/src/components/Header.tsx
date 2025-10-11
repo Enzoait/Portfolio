@@ -25,7 +25,7 @@ export default async function Header({
             </HyperText>
           </Link>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <div className="flex gap-4 self-center">
+            <div className="flex gap-4 self-center items-center">
               <Link
                 href={SOCIALS.github}
                 target="_blank"
@@ -69,9 +69,7 @@ export default async function Header({
                 />
               </Link>
               <AnimatedThemeToggler />
-              <Dropdown>
-
-              </Dropdown>
+              <Dropdown locale={lang} />
             </div>
             <MobileMenuToggle targetId="navbar-sticky" text={dict.menu.open} />
           </div>
