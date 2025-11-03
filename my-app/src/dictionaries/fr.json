@@ -2,6 +2,8 @@
   "introduction": "Bonjour ! Je suis Enzo Aït-Yakoub 👋",
   "role": "Développeur Fullstack",
   "description": "Je développe des solutions numériques robustes et performantes en mettant en oeuvre mes compétences en programmation.",
+  "aboutTitle": "À propos de moi",
+  "aboutDescription": "Passionné par la technologie et le développement web, je m'efforce de créer des applications innovantes qui répondent aux besoins des utilisateurs. Avec une solide expérience en JavaScript, React, et Node.js, je suis toujours à la recherche de nouveaux défis pour améliorer mes compétences et contribuer à des projets passionnants.",
   "links": {
     "about": "À propos",
     "projects": "Projets",
