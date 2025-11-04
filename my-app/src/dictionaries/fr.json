@@ -5,6 +5,7 @@
   "aboutTitle": "À propos de moi",
   "aboutDescription": "Passionné par la technologie et le développement web, je m'efforce de créer des applications innovantes qui répondent aux besoins des utilisateurs. Avec de solides connaissances dans différents langages et frameworks, je suis toujours à la recherche de nouveaux défis pour améliorer mes compétences et contribuer à des projets passionnants.",
   "technologiesTitle": "Techs avec lesquelles je travaille",
+  "learnMore": "En savoir plus",
   "links": {
     "about": "À propos",
     "projects": "Projets",
@@ -16,5 +17,19 @@
   "buttons": {
     "emailme": "Me contacter",
     "downloadcv": "Télécharger mon CV"
+  },
+  "projectsTitles": {
+    "1": "SecureCommit",
+    "2": "Hill, AI Chatbot",
+    "3": "ThumbExt",
+    "4": "Learnify",
+    "5": "Mint"
+  },
+  "projectsDescriptions": {
+    "1": "Une extension Visual Studio Code qui aide les développeurs à éviter que des informations sensibles apparaissent dans leurs commits, réalisée en TypeScript.",
+    "2": "Un chatbot d'administration basé sur l'IA, réalisé pour la ville d'Antony (92), créé dans le cadre du projet DevLab du M1 Lead Dev Full-Stack à l'IIM Higher School, développé avec NextJS et l'API de Mistral.",
+    "3": "Un extracteur de miniatures simple utilisant l'API de YouTube, réalisé en JavaScript et HTML.",
+    "4": "Une application React Native qui permet de créer des decks, d'y ajouter des cartes et de réviser vos cours.",
+    "5": "Une application Expo qui offre aux organisateurs de courses une solution complète leur permettant de suivre les coureurs sur une carte en temps réel, ainsi que de proposer une fonctionnalité de diffusion en direct pour chaque coureur afin que leurs proches puissent les suivre."
   }
 }
