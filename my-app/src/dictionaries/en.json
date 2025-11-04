@@ -3,7 +3,8 @@
   "role": "Fullstack Software Developer",
   "description": "I build robust and performant digital solutions by leveraging my programming skills.",
   "aboutTitle": "About Me",
-  "aboutDescription": "Passionate about technology and web development, I strive to create innovative applications that meet users' needs. With a strong background in JavaScript, React, and Node.js, I am always seeking new challenges to enhance my skills and contribute to exciting projects.",
+  "aboutDescription": "Passionate about technology and web development, I love to create innovative applications that meet users' needs. With a strong knowledge of various programming languages and frameworks, I am always seeking new challenges to enhance my skills and contribute to exciting projects.",
+  "technologiesTitle": "Techs I work with",
   "links": {
     "about": "About me",
     "projects": "Projects",
