@@ -1,10 +1,8 @@
 "use client";
 
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import {} from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import path from "path";
 
 type DropdownProps = {
   locale: "en" | "fr";
@@ -15,12 +13,16 @@ export default function Dropdown({ locale }: DropdownProps) {
 
   function switchLocale(nextLocale: "en" | "fr") {
     if (!pathname) return;
-    var targetPath : string = pathname;
-    if (pathname === "/fr" || pathname === "/en") {
-      targetPath = `/${nextLocale}`;
-    }
-    else{
-      targetPath = `/${nextLocale}${pathname}`;
+    const segments = pathname.split("/"); // ['', 'fr', 'about']
+    const first = segments[1];
+
+    const restSegments =
+      first === "en" || first === "fr" ? segments.slice(2) : segments.slice(1);
+    const restPath = restSegments.join("/"); 
+
+    let targetPath: string = `/${nextLocale}`;
+    if (restPath && restPath.length > 0) {
+      targetPath += `/${restPath}`;
     }
 
     // full reload de la page

@@ -17,7 +17,7 @@ export default async function Header({
   const dict = await getDictionary(lang);
   return (
     <>
-      <nav className="bg-transparent dark:bg-transparent fixed w-full z-20 top-0 start-0 border-b border-border dark:border-border">
+      <nav className="bg-transparent backdrop-filter backdrop-blur-lg bg-opacity-30 fixed w-full z-20 top-0 start-0 border-b border-border dark:border-border">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link href={`/${lang}`}>
             <HyperText className="text-lg font-semibold">
