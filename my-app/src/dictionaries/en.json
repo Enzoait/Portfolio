@@ -5,6 +5,7 @@
   "aboutTitle": "About Me",
   "aboutDescription": "Passionate about technology and web development, I love to create innovative applications that meet users' needs. With a strong knowledge of various programming languages and frameworks, I am always seeking new challenges to enhance my skills and contribute to exciting projects.",
   "technologiesTitle": "Techs I work with",
+  "technologiesDescription": "Throughout my journey, I have developed a particular affinity for frameworks such as Next and React, as well as languages such as TypeScript, Python, C#, and Java. I am also comfortable with TailwindCSS, Git, Google Cloud, PostgreSQL, and Supabase.",
   "learnMore": "Learn more",
   "links": {
     "about": "About me",
