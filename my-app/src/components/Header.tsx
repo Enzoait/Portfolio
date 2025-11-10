@@ -5,7 +5,6 @@ import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { LINKS, SOCIALS } from "@/constants/links";
 import { MobileMenuToggle } from "./ui/mobile-menu-toggle";
 import { HyperText } from "@/components/ui/hyper-text"
-import Flag from "react-flagpack";
 import Dropdown from "@/components/ui/dropdown";
 
 export default async function Header({
