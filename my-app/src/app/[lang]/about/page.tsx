@@ -24,8 +24,11 @@ export default async function Page({
           </p>
         </div>
         <LightRays />
-        <div className="relative flex items-center justify-cente gap-50">
-          <p className="text-3xl font-bold">{dict.technologiesTitle}</p>
+        <div className="relative flex items-center justify-cente gap-15">
+          <div className="flex flex-col gap-4 w-2xl">
+            <p className="text-3xl font-bold">{dict.technologiesTitle}</p>
+            <p className="">{dict.technologiesDescription}</p>
+          </div>
           <div className="relative size-[400px] flex items-center justify-center">
             <OrbitingCircles iconSize={50}>
               <Image

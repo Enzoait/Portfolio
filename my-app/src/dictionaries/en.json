@@ -5,6 +5,8 @@
   "aboutTitle": "About Me",
   "aboutDescription": "Passionate about technology and web development, I love to create innovative applications that meet users' needs. With a strong knowledge of various programming languages and frameworks, I am always seeking new challenges to enhance my skills and contribute to exciting projects.",
   "technologiesTitle": "Techs I work with",
+  "technologiesDescription": "Throughout my journey, I have developed a particular affinity for frameworks such as Next and React, as well as languages such as TypeScript, Python, C#, and Java. I am also comfortable with TailwindCSS, Git, Google Cloud, PostgreSQL, and Supabase.",
+  "learnMore": "Learn more",
   "links": {
     "about": "About me",
     "projects": "Projects",
@@ -16,5 +18,19 @@
   "buttons": {
     "emailme": "Get in touch",
     "downloadcv": "Download my resume"
+  },
+  "projectsTitles": {
+    "1": "SecureCommit",
+    "2": "Hill, AI Chatbot",
+    "3": "ThumbExt",
+    "4": "Learnify",
+    "5": "Mint"
+  },
+  "projectsDescriptions": {
+    "1": "A Visual Studio Code extension that helps developers avoid letting sensitive info appearing in their commits, made with TypeScript.",
+    "2": "An administrative AI chatbot made for the city of Antony (Hauts-De-Seine, France), created as part of the DevLab project in the M1 Lead Dev Full-Stack program at IIM Higher School, made with NextJS and Mistral's API.",
+    "3": "A simple thumbnail extractor using YouTube's API, made with Javascript and HTML.",
+    "4": "A React Native application that allows you to create decks, add cards to those decks, and study your courses.",
+    "5": "An Expo app that provides running competitions organizers with a fully functional solution that allows them to track runners on a map in real-time, as well as providing a live streaming feature for each runner for their friends and family to follow them."
   }
 }
