@@ -2,6 +2,7 @@ import { getDictionary } from "../../../utils/dictionaries";
 import Header from "@/components/Header";
 import CustomCard from "@/components/ui/custom-card";
 import { LightRays } from "@/components/ui/light-rays";
+import { GITHUB_PROJECTS, PROJECTS_URLS } from "@/constants/links";
 
 export default async function Page({
   params,
@@ -23,37 +24,37 @@ export default async function Page({
             imageLightPath="/securecommit.png"
             title={dict.projectsTitles[1]}
             description={dict.projectsDescriptions[1]}
-            gitHubLink="https://github.com/Enzoait/SecureCommit"
-            projectLink="https://secure-commit-website.vercel.app"
+            gitHubLink={GITHUB_PROJECTS.secureCommit}
+            projectLink={PROJECTS_URLS.secureCommit}
           />
           <CustomCard
             imageDarkPath="/hill-logo-dark.png"
             imageLightPath="/hill-logo.png"
             title={dict.projectsTitles[2]}
             description={dict.projectsDescriptions[2]}
-            gitHubLink="https://github.com/Enzoait/mairie-antony-chatbot"
-            projectLink="https://mairie-chatbot.vercel.app"
+            gitHubLink={GITHUB_PROJECTS.mairieChatbot}
+            projectLink={PROJECTS_URLS.mairieChatbot}
           />
           <CustomCard
             imageDarkPath="/thumbext.png"
             imageLightPath="/thumbext.png"
             title={dict.projectsTitles[3]}
             description={dict.projectsDescriptions[3]}
-            gitHubLink="https://github.com/Enzoait/ThumbExt"
+            gitHubLink={GITHUB_PROJECTS.thumbExt}
           />
           <CustomCard
             imageDarkPath="/learnify-white.png"
             imageLightPath="/learnify.png"
             title={dict.projectsTitles[4]}
             description={dict.projectsDescriptions[4]}
-            gitHubLink="https://github.com/Enzoait/learnify-ldf-2"
+            gitHubLink={GITHUB_PROJECTS.learnify}
           />
           <CustomCard
             imageDarkPath="/mint.svg"
             imageLightPath="/mint.svg"
             title={dict.projectsTitles[5]}
             description={dict.projectsDescriptions[5]}
-            gitHubLink="https://github.com/AurelienAllenic/mint"
+            gitHubLink={GITHUB_PROJECTS.mint}
           />
         </div>
       </div>
