@@ -17,6 +17,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { FormValues, submitForm } from "../../../utils/submitForm";
+import { sendMailOAuth } from "@/utils/mail/sendMail";
 
 export default async function Page({
   params,
@@ -25,6 +27,13 @@ export default async function Page({
 }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
+
+  function handleSubmit(): void {
+    var formValues : Promise<FormValues> = submitForm();
+    formValues.then((value) => {
+      sendMailOAuth(value.fullName, value.email, value.message, value.company);
+    });
+  }
 
   return (
     <>
@@ -42,33 +51,38 @@ export default async function Page({
                   email!
                 </FieldDescription>
                 <FieldGroup>
-                  <Field>
-                    <FieldLabel htmlFor="checkout-7j9-card-name-43j">
-                      Full Name *
-                    </FieldLabel>
-                    <Input
-                      id="checkout-7j9-card-name-43j"
-                      placeholder="John Doe"
-                      required
-                    />
-                  </Field>
-                  <Field>
-                    <FieldLabel htmlFor="checkout-7j9-card-name-43j">
-                      Email *
-                    </FieldLabel>
-                    <Input
-                      id="checkout-7j9-card-name-43j"
-                      placeholder="john.doe@example.com"
-                      required
-                    />
-                  </Field>
+                  <div className="flex justify-between gap-3">
+                    <Field>
+                      <FieldLabel htmlFor="checkout-7j9-card-name-43j">
+                        Full Name *
+                      </FieldLabel>
+                      <Input
+                        id="checkout-7j9-card-name-43j"
+                        placeholder="John Doe"
+                        name="name"
+                        required
+                      />
+                    </Field>
+                    <Field>
+                      <FieldLabel htmlFor="checkout-7j9-card-name-43j">
+                        Email *
+                      </FieldLabel>
+                      <Input
+                        id="checkout-7j9-card-name-43j"
+                        placeholder="john.doe@example.com"
+                        name="mail"
+                        required
+                      />
+                    </Field>
+                  </div>
                   <Field>
                     <FieldLabel htmlFor="checkout-7j9-card-name-43j">
                       Company
                     </FieldLabel>
                     <Input
                       id="checkout-7j9-card-name-43j"
-                      placeholder="john.doe@example.com"
+                      placeholder="Example"
+                      name="company"
                     />
                   </Field>
                 </FieldGroup>
@@ -83,13 +97,14 @@ export default async function Page({
                     <Textarea
                       id="checkout-7j9-optional-comments"
                       placeholder="Write your message here..."
-                      className="resize-none"
+                      className="resize-none overflow-y-auto overflow-x-hidden"
+                      name="message"
                     />
                   </Field>
                 </FieldGroup>
               </FieldSet>
               <Field orientation="horizontal">
-                <Button type="submit">Submit</Button>
+                <Button type="submit" onClick={handleSubmit}>Submit</Button>
               </Field>
             </FieldGroup>
           </form>
