@@ -1,52 +1,39 @@
 import nodemailer from "nodemailer";
-import { google } from "googleapis";
+import { EmailConstants } from "../../constants/email";
 
-// a mettre dans un fichier .env
-const CLIENT_ID = "VOTRE_CLIENT_ID";
-const CLIENT_SECRET = "VOTRE_CLIENT_SECRET";
-const REDIRECT_URI = "https://developers.google.com/oauthplayground";
-const REFRESH_TOKEN = "VOTRE_REFRESH_TOKEN";
+const emailConstants = new EmailConstants();
 
-export async function sendMailOAuth(
+export async function sendMail(
   name: string,
-  mail: string,
-  company: string,
-  message: string
-) : Promise<boolean> {
+  email: string,
+  message: string,
+  company: string
+): Promise<boolean> {
   try {
-    const oAuth2Client = new google.auth.OAuth2(
-    CLIENT_ID,
-    CLIENT_SECRET,
-    REDIRECT_URI
-  );
-  oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: emailConstants.USER,
+        pass: emailConstants.PASS,
+      },
+    });
 
-  const accessToken = await oAuth2Client.getAccessToken();
+    const info = await transporter.sendMail({
+      from: emailConstants.USER,
+      to: emailConstants.RECIPIENT,
+      subject: `[PORTFOLIO] ${name} ${
+        company ? `de ${company}` : ""
+      } vous a envoyé un message.`,
+      text: `Adresse email de l'expéditeur : ${email}\n\n${message}`,
+      html: `<h1>Nouveau message de ${name} ${
+        company ? `de ${company}` : ""
+      }</h1><p>Adresse email de l'expéditeur : ${email}</p><p>${message}</p>`,
+    });
 
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      type: "OAuth2",
-      user: "votre-adresse@gmail.com",
-      clientId: CLIENT_ID,
-      clientSecret: CLIENT_SECRET,
-      refreshToken: REFRESH_TOKEN,
-      accessToken: accessToken?.token || "",
-    },
-  });
-
-  const info = await transporter.sendMail({
-    from: "votre-adresse@gmail.com",
-    to: "destinataire@example.com",
-    subject: `${name} ${company != "" ? "de " + company : ""} vous a envoyé un message depuis votre portfolio.`,
-    text: `${mail}\n${message}`,
-  });
-
-  console.log("Message envoyé :", info.messageId);
-  return true;
-  }
-  catch (error) {
-    console.error("Erreur lors de l'envoi du message :", error);
+    console.log("Message envoyé :", info.messageId);
+    return true;
+  } catch (error) {
+    console.error("Erreur lors de l'envoi de l'email :", error);
     return false;
   }
 }

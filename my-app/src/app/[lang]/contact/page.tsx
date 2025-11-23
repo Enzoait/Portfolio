@@ -18,7 +18,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { FormValues, submitForm } from "../../../utils/submitForm";
-import { sendMailOAuth } from "@/utils/mail/sendMail";
+import { sendMail } from "@/utils/mail/sendMail";
 
 export default async function Page({
   params,
@@ -31,7 +31,7 @@ export default async function Page({
   function handleSubmit(): void {
     var formValues : Promise<FormValues> = submitForm();
     formValues.then((value) => {
-      sendMailOAuth(value.fullName, value.email, value.message, value.company);
+      sendMail(value.fullName, value.email, value.message, value.company);
     });
   }
 
