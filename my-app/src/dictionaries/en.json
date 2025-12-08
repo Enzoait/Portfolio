@@ -32,5 +32,19 @@
     "3": "A simple thumbnail extractor using YouTube's API, made with Javascript and HTML.",
     "4": "A React Native application that allows you to create decks, add cards to those decks, and study your courses.",
     "5": "An Expo app that provides running competitions organizers with a fully functional solution that allows them to track runners on a map in real-time, as well as providing a live streaming feature for each runner for their friends and family to follow them."
+  },
+  "form": {
+    "description": "Want to get in touch? Fill out the form below to send me an email!",
+    "name": "Full name",
+    "email": "Email address",
+    "company": "Company",
+    "messageTitle": "Message",
+    "message": "Write your message here... (the message cannot contain links)",
+    "submit": "Send"
+  },
+  "alerts": {
+    "invalidEmail": "Please enter a valid email address.",
+    "linkDetected": "A link was detected in your message. Please remove all links and try again.",
+    "messageSent": "Your message has been sent successfully! I'll get back to you as soon as possible."
   }
 }
