@@ -32,5 +32,19 @@
     "3": "Un extracteur de miniatures simple utilisant l'API de YouTube, réalisé en JavaScript et HTML.",
     "4": "Une application React Native qui permet de créer des decks, d'y ajouter des cartes et de réviser vos cours.",
     "5": "Une application Expo qui offre aux organisateurs de courses une solution complète leur permettant de suivre les coureurs sur une carte en temps réel, ainsi que de proposer une fonctionnalité de diffusion en direct pour chaque coureur afin que leurs proches puissent les suivre."
+  },
+  "form": {
+    "description": "Si vous souhaitez entrer en contact, merci de remplir le formulaire ci-dessous. Je vous répondrai dans les plus brefs délais !",
+    "name": "Nom complet",
+    "email": "Adresse e-mail",
+    "company": "Entreprise",
+    "messageTitle": "Message",
+    "message": "Ecrivez votre message ici... (le message ne peut pas contenir de liens)",
+    "submit": "Envoyer"
+  },
+  "alerts": {
+    "invalidEmail": "Veuillez entrer une adresse e-mail valide.",
+    "linkDetected": "Un lien a été détecté dans votre message. Veuillez supprimer tous les liens et réessayer.",
+    "messageSent": "Votre message a été envoyé avec succès ! Je reviens vers vous au plus vite."
   }
 }

@@ -18,7 +18,7 @@ export default async function Page({
       <div className="relative w-full items-center justify-center flex min-h-screen pt-20">
         <LightRays className="-z-10" length="100%" />
         <div className="flex flex-col self-center w-[50%] justify-center">
-          <ContactForm lang={lang} />
+          <ContactForm dict={dict} />
         </div>
       </div>
     </>

@@ -15,23 +15,27 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { sendContactMail } from "../contact/action";
-import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
-export function ContactForm({lang}: {lang: string}) {
-  const router = useRouter();
+export function ContactForm({dict}: {dict: any}) {
+  
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
 
-    var success = await sendContactMail(formData);
+    var result = await sendContactMail(formData);
 
-    if (!success) {
-      alert("A link has been detected in your message. Please remove any links and try again.");
+    if (result === 0) {
+      toast.error(dict.alerts.invalidEmail);
+      return;
+    }
+    else if (result === 1) {
+      toast.error(dict.alerts.linkDetected);
       return;
     }
 
-    router.replace(`/${lang}/contact`);
+    toast.success(dict.alerts.messageSent);
   }
 
   return (
@@ -40,12 +44,12 @@ export function ContactForm({lang}: {lang: string}) {
         <FieldSet>
           <FieldLegend>Contact</FieldLegend>
           <FieldDescription>
-            Want to get in touch? Fill out the form below to send me an email!
+            {dict.form.description}
           </FieldDescription>
           <FieldGroup>
             <div className="flex justify-between gap-3">
               <Field>
-                <FieldLabel htmlFor="contact-full-name">Full Name *</FieldLabel>
+                <FieldLabel htmlFor="contact-full-name">{dict.form.name} *</FieldLabel>
                 <Input
                   id="contact-full-name"
                   placeholder="John Doe"
@@ -54,7 +58,7 @@ export function ContactForm({lang}: {lang: string}) {
                 />
               </Field>
               <Field>
-                <FieldLabel htmlFor="contact-email">Email *</FieldLabel>
+                <FieldLabel htmlFor="contact-email">{dict.form.email} *</FieldLabel>
                 <Input
                   id="contact-email"
                   placeholder="john.doe@example.com"
@@ -64,7 +68,7 @@ export function ContactForm({lang}: {lang: string}) {
               </Field>
             </div>
             <Field>
-              <FieldLabel htmlFor="contact-company">Company</FieldLabel>
+              <FieldLabel htmlFor="contact-company">{dict.form.company}</FieldLabel>
               <Input
                 id="contact-company"
                 placeholder="Example"
@@ -77,10 +81,10 @@ export function ContactForm({lang}: {lang: string}) {
         <FieldSet>
           <FieldGroup>
             <Field>
-              <FieldLabel htmlFor="contact-message">Message *</FieldLabel>
+              <FieldLabel htmlFor="contact-message">{dict.form.messageTitle} *</FieldLabel>
               <Textarea
                 id="contact-message"
-                placeholder="Write your message here..."
+                placeholder={dict.form.message}
                 className="resize-none overflow-y-auto overflow-x-hidden"
                 name="message"
                 required
