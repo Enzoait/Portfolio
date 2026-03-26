@@ -56,6 +56,14 @@ export default async function Page({
             description={dict.projectsDescriptions[5]}
             gitHubLink={GITHUB_PROJECTS.mint}
           />
+          <CustomCard
+            imageDarkPath="/creacontenu.svg"
+            imageLightPath="/creacontenu.svg"
+            title={dict.projectsTitles[6]}
+            description={dict.projectsDescriptions[6]}
+            gitHubLink={GITHUB_PROJECTS.creacontenu}
+            projectLink={PROJECTS_URLS.creaContenu}
+          />
         </div>
       </div>
     </>

@@ -24,14 +24,16 @@
     "2": "Hill, AI Chatbot",
     "3": "ThumbExt",
     "4": "Learnify",
-    "5": "Mint"
+    "5": "Mint",
+    "6": "CreaContenu SaaS"
   },
   "projectsDescriptions": {
     "1": "Une extension Visual Studio Code qui aide les développeurs à éviter que des informations sensibles apparaissent dans leurs commits, réalisée en TypeScript.",
     "2": "Un chatbot d'administration basé sur l'IA, réalisé pour la ville d'Antony (92), créé dans le cadre du projet DevLab du M1 Lead Dev Full-Stack à l'IIM Higher School, développé avec NextJS et l'API de Mistral.",
     "3": "Un extracteur de miniatures simple utilisant l'API de YouTube, réalisé en JavaScript et HTML.",
     "4": "Une application React Native qui permet de créer des decks, d'y ajouter des cartes et de réviser vos cours.",
-    "5": "Une application Expo qui offre aux organisateurs de courses une solution complète leur permettant de suivre les coureurs sur une carte en temps réel, ainsi que de proposer une fonctionnalité de diffusion en direct pour chaque coureur afin que leurs proches puissent les suivre."
+    "5": "Une application Expo qui offre aux organisateurs de courses une solution complète leur permettant de suivre les coureurs sur une carte en temps réel, ainsi que de proposer une fonctionnalité de diffusion en direct pour chaque coureur afin que leurs proches puissent les suivre.",
+    "6": "Une plateforme SaaS pour les créateurs de contenu (création, organisation, management, analytics...), réalisée en tant que projet pour le cours d'architecture front-end à l'IIM, construite avec Vite & Supabase."
   },
   "form": {
     "description": "Si vous souhaitez entrer en contact, merci de remplir le formulaire ci-dessous. Je vous répondrai dans les plus brefs délais !",

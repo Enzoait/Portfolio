@@ -15,9 +15,11 @@ export const GITHUB_PROJECTS = {
   thumbExt: "https://github.com/Enzoait/ThumbExt",
   learnify: "https://github.com/Enzoait/learnify-ldf-2",
   mint: "https://github.com/AurelienAllenic/mint",
-}
+  creacontenu: "https://github.com/Enzoait/CreaContenu-SaaS",
+};
 
 export const PROJECTS_URLS = {
   secureCommit: "https://secure-commit-website.vercel.app",
   mairieChatbot: "https://mairie-chatbot.vercel.app",
-}
+  creaContenu: "https://crea-contenu-saa-s.vercel.app",
+};
